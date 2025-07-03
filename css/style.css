@@ -52,6 +52,10 @@ header {
   padding: 8rem 5rem;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 header h1 {
   font-size: 6rem;
@@ -62,30 +66,33 @@ header h1 {
 header p {
   font-size: 2rem;
   letter-spacing: 0.5rem;
+  margin-bottom: 2rem;
 }
-header .fa-html5 {
+header .tech-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+header [class*=fa-] {
   font-size: 3rem;
   margin: 0.2rem;
+  transition: transform 0.3s ease;
+  cursor: pointer;
 }
-header .fa-css3-alt {
-  font-size: 3rem;
-  margin: 0.2rem;
-}
-header .fa-js {
-  font-size: 3rem;
-  margin: 0.2rem;
-}
-header .fa-php {
-  font-size: 3rem;
-  margin: 0.2rem;
-}
-header .fa-symfony {
-  font-size: 3rem;
-  margin: 0.2rem;
+header [class*=fa-]:hover {
+  transform: scale(1.2);
 }
 
 .picture {
   grid-area: picture;
+  padding: 6rem;
+  background: var(--background);
+}
+.picture img {
+  border-radius: 50%;
+  filter: grayscale(100%) brightness(1.1) contrast(1);
 }
 
 aside {

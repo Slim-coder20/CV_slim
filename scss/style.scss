@@ -16,6 +16,10 @@ header {
   padding: 8rem 5rem;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   h1 {
     font-size: 6rem;
@@ -23,35 +27,43 @@ header {
     font-weight: 300;
     letter-spacing: 3rem;
   }
+
   p {
     font-size: 2rem;
     letter-spacing: 0.5rem;
+    margin-bottom: 2rem;
   }
-  .fa-html5 {
+
+  // Conteneur pour les icônes
+  .tech-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  // Styles pour toutes les icônes
+  [class*="fa-"] {
     font-size: 3rem;
     margin: 0.2rem;
-  }
-  .fa-css3-alt {
-    font-size: 3rem;
-    margin: 0.2rem;
-  }
-  .fa-js {
-    font-size: 3rem;
-    margin: 0.2rem;
-  }
-  .fa-php {
-    font-size: 3rem;
-    margin: 0.2rem;
-  }
-  .fa-symfony {
-    font-size: 3rem;
-    margin: 0.2rem;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 
 .picture {
   grid-area: picture;
-  //background: purple;
+  padding: 6rem;
+  background: var(--background);
+  img {
+    border-radius: 50%;
+    filter: grayscale(100%) brightness(1.1) contrast(1);
+  }
 }
 
 aside {
