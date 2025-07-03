@@ -109,6 +109,14 @@ aside {
         transform: rotate(45deg);
       }
     }
+    .stars-container {
+      display: flex;
+      margin: 2rem 0 3rem 0;
+      i {
+        font-size: 2rem;
+        margin: 0 1rem;
+      }
+    }
   }
 }
 
