@@ -58,7 +58,7 @@ img {
 
 .grid-container {
   display: grid;
-  grid: "picture header" auto "aside main" 1fr/350px auto;
+  grid: "picture header" auto "aside main" 1fr "footer footer" auto/350px auto;
   min-height: 100vh;
 }
 
@@ -231,6 +231,63 @@ main .experience ul {
   list-style: circle;
   padding-left: 4rem;
   margin: 2rem 0;
+}
+
+footer {
+  grid-area: footer;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--text);
+  color: white;
+  border-top: 0.5px solid var(--border);
+  text-align: center;
+}
+footer h2 {
+  margin-bottom: 3rem;
+}
+footer form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+footer .prefix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+  border-top-left-radius: 20%;
+  border-bottom-left-radius: 20%;
+}
+footer button {
+  background: var(--text);
+  border: 0;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+footer button:hover {
+  opacity: 0.8;
+}
+footer button .postfix {
+  background: linear-gradient(to right, var(--dark), var(--light));
+  padding: 1rem 2rem;
+  color: white;
+  font-size: 2rem;
+  border-top-right-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+footer input {
+  outline: 0;
+  border: 0;
+  min-width: 400px;
+  padding: 1rem 2rem;
+  line-height: 2rem;
+}
+footer input::placeholder {
+  color: var(--dark);
 }
 
 /*# sourceMappingURL=style.css.map */
