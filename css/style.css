@@ -48,6 +48,13 @@ img {
 .text-primary {
   color: var(--primary);
 }
+.text-hint {
+  color: var(--hint);
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
 
 .grid-container {
   display: grid;
@@ -108,7 +115,7 @@ header [class*=fa-]:hover {
 aside {
   grid-area: aside;
   background: var(--background);
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--border);
   padding: 5rem;
   min-height: 1500px;
 }
@@ -155,9 +162,75 @@ aside .block .stars-container i {
   font-size: 2rem;
   margin: 0 1rem;
 }
+aside .block .sociaux-links {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0 3rem 0;
+}
+aside .block .sociaux-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+aside .block .sociaux-links a:hover {
+  transform: translateX(5px);
+  transition: transform 0.3s ease;
+}
+aside .block .sociaux-links a i {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  color: var(--light);
+  transition: transform 0.3s ease;
+}
+aside .block .sociaux-links a i:hover {
+  transform: scale(1.2);
+}
+aside .block .sociaux-links a span {
+  font-size: 1.6rem;
+  color: var(--text);
+}
 
 main {
   grid-area: main;
+  padding: 5rem;
+}
+main h2 {
+  margin-bottom: 4rem;
+}
+main p {
+  letter-spacing: 0.1rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+main .profil-section p {
+  margin-bottom: 2rem;
+  line-height: 2.2rem;
+}
+main .experience {
+  display: flex;
+  margin: 6rem 0;
+}
+main .experience .timeline {
+  text-align: center;
+  color: var(--hint);
+  padding-right: 2rem;
+  border-right: 1px solid var(--border);
+}
+main .experience a {
+  color: var(--light);
+}
+main .experience .content {
+  padding: 0 2rem;
+}
+main .experience .mb-5 {
+  margin-top: 2rem;
+}
+main .experience ul {
+  list-style: circle;
+  padding-left: 4rem;
+  margin: 2rem 0;
 }
 
 /*# sourceMappingURL=style.css.map */

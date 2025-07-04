@@ -1,6 +1,7 @@
 @use "reset" as *;
 @use "base" as *;
 @use "classes" as *;
+@use "utils" as *;
 
 .grid-container {
   display: grid;
@@ -71,7 +72,7 @@ header {
 aside {
   grid-area: aside;
   background: var(--background);
-  border-right: 1px solid #ddd;
+  border-right: 1px solid var(--border);
   padding: 5rem;
   min-height: 1500px;
 
@@ -118,10 +119,85 @@ aside {
         margin: 0 1rem;
       }
     }
+    .sociaux-links {
+      display: flex;
+      flex-direction: column;
+      margin: 2rem 0 3rem 0;
+
+      a {
+        display: flex;
+        align-items: center;
+        margin-bottom: 1rem;
+        text-decoration: none;
+        color: inherit;
+
+        &:hover {
+          transform: translateX(5px);
+          transition: transform 0.3s ease;
+        }
+
+        i {
+          font-size: 2.5rem;
+          margin-right: 1rem;
+          color: var(--light);
+          transition: transform 0.3s ease;
+
+          &:hover {
+            transform: scale(1.2);
+          }
+        }
+
+        span {
+          font-size: 1.6rem;
+          color: var(--text);
+        }
+      }
+    }
   }
 }
 
 main {
   grid-area: main;
-  //background: green;
+  padding: 5rem;
+  h2 {
+    margin-bottom: 4rem;
+  }
+  p {
+    letter-spacing: 0.1rem;
+    line-height: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  // Espacement spécifique pour la section profil professionnel
+  .profil-section {
+    p {
+      margin-bottom: 2rem;
+      line-height: 2.2rem;
+    }
+  }
+
+  .experience {
+    display: flex;
+    margin: 6rem 0;
+    .timeline {
+      text-align: center;
+      color: var(--hint);
+      padding-right: 2rem;
+      border-right: 1px solid var(--border);
+    }
+
+    a {
+      color: var(--light);
+    }
+    .content {
+      padding: 0 2rem;
+    }
+    .mb-5 {
+      margin-top: 2rem;
+    }
+    ul {
+      list-style: circle;
+      padding-left: 4rem;
+      margin: 2rem 0;
+    }
+  }
 }
