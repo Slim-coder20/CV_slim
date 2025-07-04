@@ -149,6 +149,7 @@ aside .block .bar-skill .bar-skill-dot {
 aside .block .stars-container {
   display: flex;
   margin: 2rem 0 3rem 0;
+  color: var(--hint);
 }
 aside .block .stars-container i {
   font-size: 2rem;
