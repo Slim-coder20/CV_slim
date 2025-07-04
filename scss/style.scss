@@ -2,6 +2,7 @@
 @use "base" as *;
 @use "classes" as *;
 @use "utils" as *;
+@use "animation" as *;
 
 .grid-container {
   display: grid;
@@ -35,6 +36,10 @@ header {
     font-size: 2rem;
     letter-spacing: 0.5rem;
     margin-bottom: 2rem;
+  }
+  .animation {
+    display: inline-block;
+    animation: bounce 2s;
   }
 
   // Conteneur pour les icônes
@@ -227,8 +232,8 @@ footer {
     padding: 1rem 2rem;
     color: white;
     font-size: 2rem;
-    border-top-left-radius: 20%;
-    border-bottom-left-radius: 20%;
+    border-top-left-radius: 0.5rem;
+    border-bottom-left-radius: 0.5rem;
   }
   button {
     background: var(--text);
